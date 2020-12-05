@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PPE- Violation</title>
+
+  <!-- Bootstrap core CSS
+  <link rel="stylesheet" type="text/css" href="{{url_for ('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}"> -->
+
+  <!--<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'> -->
+
+<link rel="stylesheet" type="text/css" href="{{url_for ('static', filename='css/heroic-features.css') }} ">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <!--  <link href="{{url_for ('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+
+
+
+  Custom styles for this template -->
+
+<style>
+
+.card-img-top:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+@media (min-width: 122px) {
+  .modal-lg {
+    width: 1200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+}
+
+.red {
+        color: red;
+    }
+
+.green {
+    color: green;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Welcome</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ <div class="container">
+
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+
+<div class="container">
+      <form name="sentMessage" id="contactForm" action='/result' method='post' novalidate>
+          <h1 class="display-3"><b>PPE Violation..!</b></h1>
+      <h4 class="display-5">A project for NTPC Ramagundam for detection of whether a person is wearing PPE equipments or not !!!!</h4>
+      <!-- <a href="#" class="btn btn-primary btn-lg">Date!</a>
+  <div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> Helmet
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> Jacket
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> Shoes
+  </label>
+</div> -->
+
+      </form>
+</div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Jay prakash kumar 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">    -->
+
+ <script src="{{url_for ('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{url_for ('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+
+    <script>
+$(function() {
+		$('.pop').on('click', function() {
+			$('.imagepreview').attr('src', $(this).find('img').attr('src'));
+			$('#imagemodal').modal('show');
+			$('#imagemodal').modal('handleUpdate');
+		});
+});
+
+    </script>
+
+
+
+ <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="{{url_for ('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+
+
+  <!-- Custom scripts for this template
+  <script src="{{url_for ('static', filename='js/gulpfile.js') }}"></script> -->
+
+</body>
+
+</html>
+
+
